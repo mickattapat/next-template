@@ -14,7 +14,7 @@ export default function Posts(props: Props) {
         return (
           <div
             key={post.id}
-            className=" w-36 min-h-[200px] border flex flex-col justify-between items-center"
+            className="w-36 h-[250px] border flex flex-col justify-between items-center"
           >
             <p>
               {i + 1} : {post.title}

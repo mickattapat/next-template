@@ -1,6 +1,6 @@
 export interface IParams {
-  method: string
-  path:string
-  payload: any
-  port:string
+  method?: string
+  path?:any
+  payload?: any
+  port?:string
 }

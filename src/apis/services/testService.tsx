@@ -1,3 +1,4 @@
+import { IPost } from "@/models/posts.interface.model";
 import apiConfig from "../apiConfig";
 
 const testService = {
@@ -7,6 +8,17 @@ const testService = {
         "posts",
         {},
         `${process.env.NEXT_PUBLIC_PORT_TARGET}`
+      );
+    } catch (error) {
+      throw error;
+    }
+  },
+  postTest: function (payload: IPost) {
+    try {
+      return apiConfig.postBaseURL(
+        "posts",
+        { payload: payload },
+        process.env.NEXT_PUBLIC_PORT_TARGET
       );
     } catch (error) {
       throw error;

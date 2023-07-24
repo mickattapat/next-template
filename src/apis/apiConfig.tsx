@@ -52,22 +52,22 @@ const APICaller = (params: IParams) => {
 };
 
 const methodAPI = {
-  get: (path: string, params: any, port: string) =>
+  get: (path: string, params: IParams, port: any) =>
     APICaller({ ...params, method: "GET", path, port }),
-  post: (path: string, params: any, port: string) =>
+  post: (path: string, params: IParams, port: any) =>
     APICaller({ ...params, method: "POST", path, port }),
-  put: (path: string, params: any, port: string) =>
+  put: (path: string, params: IParams, port: any) =>
     APICaller({ ...params, method: "PUT", path, port }),
-  delete: (path: string, params: any, port: string) =>
+  delete: (path: string, params: IParams, port: any) =>
     APICaller({ ...params, method: "DELETE", path, port }),
 
-  getBaseURL: (path: string, params: any, port: string) =>
+  getBaseURL: (path: string, params: IParams, port: any) =>
     APICaller({ ...params, method: "GET", path, port }),
-  postBaseURL: (path: string, params: any, port: string) =>
+  postBaseURL: (path: string, params: IParams, port: any) =>
     APICaller({ ...params, method: "POST", path, port }),
-  putBaseURL: (path: string, params: any, port: string) =>
+  putBaseURL: (path: string, params: IParams, port: any) =>
     APICaller({ ...params, method: "PUT", path, port }),
-  deleteBaseURL: (path: string, params: any, port: string) =>
+  deleteBaseURL: (path: string, params: IParams, port: any) =>
     APICaller({ ...params, method: "DELETE", path, port }),
 };
 
