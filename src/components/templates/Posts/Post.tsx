@@ -1,7 +1,7 @@
 "use client";
 
 import DefaultButton from "@/components/atoms/Button/Button";
-import { IPost } from "@/models/posts.interface.model";
+import { IPost } from "@/models/posts.model";
 import React from "react";
 
 type Props = {

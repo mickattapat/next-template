@@ -1,10 +1,11 @@
-import { IParams } from "@/models/api.interface.model";
-import axios from "axios";
+import { IParams } from "@/models/api.model";
+import axios, { AxiosResponse } from "axios";
 
 const APICaller = (params: IParams) => {
+  let token: string = "";
   if (typeof window !== "undefined") {
     // Perform localStorage action
-    var token: any = localStorage.getItem("token") || "";
+    token = localStorage.getItem("token") || "";
   }
   const api = axios.create({
     baseURL: `${process.env.NEXT_PUBLIC_END_POINT}${
@@ -25,26 +26,26 @@ const APICaller = (params: IParams) => {
     case "GET":
       return api
         .get(path)
-        .then((response: any) => ({ ...response }))
-        .catch((error: any) => error.response);
+        .then((response: AxiosResponse) => ({ ...response }))
+        .catch((error: Error) => error);
 
     case "POST":
       return api
         .post(path, payload)
-        .then((response: any) => ({ ...response }))
-        .catch((error: any) => error.response);
+        .then((response: AxiosResponse) => ({ ...response }))
+        .catch((error: Error) => error);
 
     case "PUT":
       return api
         .put(path, payload)
-        .then((response: any) => ({ ...response }))
-        .catch((error: any) => error.response);
+        .then((response: AxiosResponse) => ({ ...response }))
+        .catch((error: Error) => error);
 
     case "DELETE":
       return api
         .delete(path, { data: payload })
-        .then((response: any) => ({ ...response }))
-        .catch((error: any) => error.response);
+        .then((response: AxiosResponse) => ({ ...response }))
+        .catch((error: Error) => error);
 
     default:
       return "[API_CALLER]: Missing params.";
@@ -52,22 +53,22 @@ const APICaller = (params: IParams) => {
 };
 
 const methodAPI = {
-  get: (path: string, params: IParams, port: any) =>
+  get: (path: string, params: IParams, port: string) =>
     APICaller({ ...params, method: "GET", path, port }),
-  post: (path: string, params: IParams, port: any) =>
+  post: (path: string, params: IParams, port: string) =>
     APICaller({ ...params, method: "POST", path, port }),
-  put: (path: string, params: IParams, port: any) =>
+  put: (path: string, params: IParams, port: string) =>
     APICaller({ ...params, method: "PUT", path, port }),
-  delete: (path: string, params: IParams, port: any) =>
+  delete: (path: string, params: IParams, port: string) =>
     APICaller({ ...params, method: "DELETE", path, port }),
 
-  getBaseURL: (path: string, params: IParams, port: any) =>
+  getBaseURL: (path: string, params: IParams, port: string) =>
     APICaller({ ...params, method: "GET", path, port }),
-  postBaseURL: (path: string, params: IParams, port: any) =>
+  postBaseURL: (path: string, params: IParams, port: string) =>
     APICaller({ ...params, method: "POST", path, port }),
-  putBaseURL: (path: string, params: IParams, port: any) =>
+  putBaseURL: (path: string, params: IParams, port: string) =>
     APICaller({ ...params, method: "PUT", path, port }),
-  deleteBaseURL: (path: string, params: IParams, port: any) =>
+  deleteBaseURL: (path: string, params: IParams, port: string) =>
     APICaller({ ...params, method: "DELETE", path, port }),
 };
 

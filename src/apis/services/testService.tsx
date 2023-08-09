@@ -1,4 +1,4 @@
-import { IPost } from "@/models/posts.interface.model";
+import { IPost } from "@/models/posts.model";
 import apiConfig from "../apiConfig";
 
 const testService = {

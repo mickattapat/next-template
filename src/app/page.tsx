@@ -1,6 +1,6 @@
 import testService from "@/apis/services/testService";
 import Posts from "@/components/templates/Posts/Post";
-import { IPost } from "@/models/posts.interface.model";
+import { IPost } from "@/models/posts.model";
 
 export default async function Home() {
   try {
