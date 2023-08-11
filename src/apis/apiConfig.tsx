@@ -27,25 +27,25 @@ const APICaller = (params: IParams) => {
       return api
         .get(path)
         .then((response: AxiosResponse) => ({ ...response }))
-        .catch((error: Error) => error);
+        .catch((error: AxiosResponse) => error);
 
     case "POST":
       return api
         .post(path, payload)
         .then((response: AxiosResponse) => ({ ...response }))
-        .catch((error: Error) => error);
+        .catch((error: AxiosResponse) => error);
 
     case "PUT":
       return api
         .put(path, payload)
         .then((response: AxiosResponse) => ({ ...response }))
-        .catch((error: Error) => error);
+        .catch((error: AxiosResponse) => error);
 
     case "DELETE":
       return api
         .delete(path, { data: payload })
         .then((response: AxiosResponse) => ({ ...response }))
-        .catch((error: Error) => error);
+        .catch((error: AxiosResponse) => error);
 
     default:
       return "[API_CALLER]: Missing params.";
