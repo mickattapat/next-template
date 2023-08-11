@@ -18,7 +18,7 @@ const testService = {
       return apiConfig.postBaseURL(
         "posts",
         { payload: payload },
-        process.env.NEXT_PUBLIC_PORT_TARGET
+        `${process.env.NEXT_PUBLIC_PORT_TARGET}`
       );
     } catch (error) {
       throw error;
