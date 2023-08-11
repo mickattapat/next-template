@@ -1,9 +1,9 @@
 import { ReactNode } from "react";
 
-type Props = {
+interface Props {
   text?: string;
   children: ReactNode;
-};
+}
 
 const DefaultButton = (props: Props) => {
   return (
