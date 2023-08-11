@@ -4,9 +4,9 @@ import DefaultButton from "@/components/atoms/Button/Button";
 import { IPost } from "@/models/posts.model";
 import React from "react";
 
-type Props = {
+interface Props {
   posts: IPost[];
-};
+}
 export default function Posts(props: Props) {
   return (
     <div className="flex gap-3 flex-wrap justify-center items-center my-4">
