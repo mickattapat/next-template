@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      minHeight: {
+        'content': "calc(100vh - (70px + 70px))",
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
