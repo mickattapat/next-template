@@ -1,4 +1,5 @@
 type SortText = "lower" | "upper";
+export const fileAccept = "image/png, image/jpeg, image/webp"
 
 export const toNumber = (value: unknown) => {
   const number = Number(value);

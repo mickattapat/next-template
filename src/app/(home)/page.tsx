@@ -1,4 +1,4 @@
-import testService from "@/apis/services/testService";
+import testService from "@/apis/services/test.service";
 import Posts from "@/components/templates/Posts/Post";
 import { IPost } from "@/models/posts.model";
 import { AxiosResponse } from "axios";

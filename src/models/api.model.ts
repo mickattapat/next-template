@@ -3,4 +3,5 @@ export interface IParams {
   path?: string
   payload?: any
   port?:string
+  thirdpartyURL?: string
 }

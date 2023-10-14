@@ -13,6 +13,7 @@ const testService = {
       throw error;
     }
   },
+  
   postTest: function (payload: IPost) {
     try {
       return apiConfig.postBaseURL(
