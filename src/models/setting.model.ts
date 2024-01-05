@@ -1,4 +1,4 @@
-export interface IChips {
+export interface ITag {
   name?: string,
   color?: string
 }

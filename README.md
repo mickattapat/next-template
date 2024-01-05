@@ -22,11 +22,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More Atomic Web Design
-
-[hetoro (TH)](https://hetoro.medium.com/%E0%B9%81%E0%B8%99%E0%B8%B0%E0%B8%99%E0%B8%B3-atomic-web-design-%E0%B8%AA%E0%B8%B3%E0%B8%AB%E0%B8%A3%E0%B8%B1%E0%B8%9A-web-developer-998b553ebe9c)
-[bradfrost](https://bradfrost.com/blog/post/atomic-web-design/)
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

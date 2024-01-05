@@ -2,7 +2,7 @@ import { IPost } from "@/models/posts.model";
 import apiConfig from "../apiConfig";
 
 const testService = {
-  testGetApi: function () {
+  getApi: function () {
     try {
       return apiConfig.getBaseURL(
         "posts",

@@ -1,10 +1,10 @@
-import { IChips } from '@/models/setting.model'
+import { ITag } from '@/models/setting.model'
 import React from 'react'
 interface Props {
   outputEvent: Function
-  item: IChips
+  item: ITag
 }
-export default function Chip({ outputEvent, item }: Props) {
+export default function Tag({ outputEvent, item }: Props) {
 
   return (
     <div className={`center relative inline-block select-none whitespace-nowrap rounded-lg ${item.color} py-2 px-3.5 align-baseline font-sans text-xs font-bold leading-none text-white`}>

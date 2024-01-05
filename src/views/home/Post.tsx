@@ -1,6 +1,6 @@
 "use client";
 
-import DefaultButton from "@/components/atoms/Button/Button";
+import DefaultButton from "@/components/button/Button";
 import { IPost } from "@/models/posts.model";
 import React from "react";
 

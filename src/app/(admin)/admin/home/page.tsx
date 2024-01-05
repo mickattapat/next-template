@@ -1,4 +1,4 @@
-import AdminHomePage from "@/components/templates/admin/Home";
+import AdminHomePage from "@/views/admin/Home";
 import React from "react";
 
 interface Props { }
